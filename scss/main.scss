@@ -4,7 +4,7 @@ $primary-color:#444;
 $secondary-color:#eece1a;
 $show-home-image:true;
 $home-image:url(../img/background.jpg);
-$background-opacity:0.5;
+$background-opacity:0.9;
 *{margin:0;padding:0;box-sizing: border-box;}
 
 body
@@ -16,7 +16,7 @@ body
     @include background;    
     //background:$primary-color;
     color:set-text-color($primary-color);   
-    height:100%;
+    height:100vh;
     font-family:'Segoe UI',sans-serif;
     line-height: 1.5;
     }
@@ -36,7 +36,7 @@ h1,h2,h3
     {
         margin-bottom: 2rem;
         padding:0.2rem 1rem;
-        //background:rgba(lighten($primary-color,2),0.5);
+        background:rgba(lighten($primary-color,2),0.5);
     }
 }
 
@@ -88,7 +88,7 @@ main{
     
     .bio-image{
     grid-area: bioimage;
-    height:200px;
+    height:220px;
     width:200px;    
     margin:auto;
     border-radius: 50%;
