@@ -1,6 +1,5 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
 $primary-color:#444;
 $secondary-color:#eece1a;
 $show-home-image:true;
@@ -12,7 +11,7 @@ body
     {
         &#about-bg-img{
             background: #444;
-            height:100vh;
+//            height:100vh;    
         }    
     @include background;    
     //background:$primary-color;
@@ -27,7 +26,7 @@ h1,h2,h3
     font-weight: 400;
     &.lg-heading{
         font-size:6rem;
-        animation:nishant 1s infinite;
+        animation:nishant 5s infinite;
         
         .text-secondary{
             color:$secondary-color;
@@ -42,10 +41,10 @@ h1,h2,h3
 }
 
 @keyframes nishant{
-    0%{color:red;}
-    25%{color:#bf55ec;}
+    0%{color:lightblue;}
+    25%{color:aquamarine;}
     75%{color:white;}
-    100%{color:red;}
+    100%{color:lightblue;}
 }
 
 a{
@@ -143,6 +142,7 @@ main{
     }
 }
 
+
 //contact page
 .boxes{
     display: flex;
@@ -157,6 +157,11 @@ main{
         padding:1.5rem 2.5rem;
         margin-bottom: 3rem;
         @include easeOut;
+        
+        .text-secondary
+        {
+            color:$secondary-color;
+        }
         
         &:hover{
             padding:0.5rem 1.5rem;
@@ -199,3 +204,4 @@ main{
     color:set-text-color($primary-color);
     height:60px;
 }
+@import 'mobile';
