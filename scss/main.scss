@@ -16,7 +16,7 @@ body
     @include background;    
     //background:$primary-color;
     color:set-text-color($primary-color);   
-    height:100vh;
+    height:100%;
     font-family:'Segoe UI',sans-serif;
     line-height: 1.5;
     }
@@ -83,6 +83,7 @@ main{
     grid-gap:30px;
     grid-template:
         'bioimage bio bio'
+        'heading heading heading'
         'job1 job2 job3';
     grid-template-columns: repeat(3,1fr);
     
@@ -94,6 +95,19 @@ main{
     border-radius: 50%;
     border:$secondary-color 3px solid;
 }
+    .heading{
+    display: inline;
+    grid-area: heading;
+    text-align: center;
+    font-size: 3rem;
+        
+        span{
+            background: #5e5e5e;
+            padding: 0rem 1rem;
+            border-radius: 20%;
+        }
+    }
+    
 .bio{
     grid-area:bio;
     font-size:1.5rem;
@@ -117,10 +131,62 @@ main{
     background:lighten($primary-color,5);
     padding:0.5rem;
     border-bottom:$secondary-color 5px solid;
+    text-align: center;
     
-    h6{
-        padding-top:10px;
-        padding-bottom: 10px;
+    span{
+       font-size: 2rem;
+    }
+    
+    .technologies{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        
+        .technology{
+            width:100%;
+            padding-top:2px;
+            span{
+       font-size: 2rem;
+       color:$secondary-color;        
+          }
+            
+        .progress{
+            width:100%;
+            background-color:aliceblue;
+            
+            .progress-bar1{
+                width:95%;
+                background-color: blue;
+                color:blue;
+            }
+            .progress-bar2{
+                width:93%;
+                background-color: blue;
+                color:blue;
+            }
+            .progress-bar3{
+                width:90%;
+                background-color: blue;
+                color:blue;
+            }
+            .progress-bar4{
+                width:85%;
+                background-color: blue;
+                color:blue;
+            }
+            .progress-bar5{
+                width:80%;
+                background-color: blue;
+                color:blue;
+            }
+            .progress-bar6{
+                width:75%;
+                background-color: blue;
+                color:blue;
+            }
+        }
+            
+        }
     }
 }
 }

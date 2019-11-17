@@ -7,7 +7,6 @@
             background-image:$home-image;
             background-attachment: fixed;
             background-size: cover;
-            overflow:hidden;
             &:after{
                 content:'';
                 position:absolute;

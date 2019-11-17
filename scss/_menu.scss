@@ -63,7 +63,8 @@
         background:darken(#444,5);
         list-style: none;
         transform:translate3d(0,-100%,0);
-        @include easeOut;
+        transition:all 0.5s ease-out;
+
         
         &.show{
             //slidein from top
@@ -98,11 +99,11 @@
     
     .nav-item{
         transform: translate3d(600,0,0);
-        @include easeOut;
+        transition:all 0.5s ease-out;
+
         
         &.show{
             transform: translate3d(0,0,0);
-
         }
         
         &.current > a{
@@ -119,7 +120,7 @@
       font-weight:300;
       color:set-text-color(#444);
       text-decoration: none;
-      @include easeOut;
+      transition:all 0.5s ease-out;
         
         &:hover{
             color:#eece1a;
@@ -131,6 +132,6 @@
 
 @for $x from 1 through 4{
     .nav-item:nth-child(#{$x}){
-        transition-delay: $x*0.1s;
+        transition-delay: $x * 0.1s;
     }
 }
